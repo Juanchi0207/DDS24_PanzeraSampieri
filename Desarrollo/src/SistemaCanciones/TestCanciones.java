@@ -15,6 +15,7 @@ public class TestCanciones {
 
         assertEquals(new En_Auge(), cancion.getPopularidad());
         cancion.reporducir();
+        cancion.reporducir();
 
     }
 }
