@@ -1,7 +1,3 @@
-package estrategias.exportacion.pdf;
-
-import config.Config;
-import exportables.Exportable;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
@@ -41,7 +37,7 @@ public class AdapterApachePDFBox implements AdapterExportadorPDF {
     }
 
     private String rutaCompletaDelArchivo(){
-        return Config.RUTA_EXPORTACION + this.nombreDeArchivo;
+        return this.nombreDeArchivo;
     }
 
     private void agregarDatos(PDPageContentStream pagina, Map<String, List<String>> datos) throws IOException {

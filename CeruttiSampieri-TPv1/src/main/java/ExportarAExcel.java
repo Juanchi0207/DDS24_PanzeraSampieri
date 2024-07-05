@@ -1,8 +1,3 @@
-package estrategias.exportacion.excel;
-
-import config.Config;
-import estrategias.exportacion.EstrategiaDeExportacion;
-import exportables.Exportable;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -13,6 +8,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+
+
 
 public class ExportarAExcel implements EstrategiaDeExportacion {
     private XSSFWorkbook workbook;
@@ -31,7 +28,7 @@ public class ExportarAExcel implements EstrategiaDeExportacion {
     }
 
     private String rutaCompletaDelArchivo(){
-        return Config.RUTA_EXPORTACION + this.nombreDeArchivo;
+        return this.nombreDeArchivo;
     }
 
     private void guardar(){
