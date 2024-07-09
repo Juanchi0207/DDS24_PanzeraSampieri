@@ -15,14 +15,14 @@ public class ExportadorTest {
     @Test
     public void exportarExcel() {
         this.documento.agregarDatos("1", "Juan", "Sampieri", "19");
-        String resultado = ExportadorDocumento.exportarDocumento(documento, FabricaExportador.TipoExportacion.EXCEL, "datos.xlsx");
-        Assert.assertEquals("datos.xlsx", resultado);
+        String resultado = FabricaExportador.obtenerEstrategia("EXCEL", "datos.xlsx", documento);
+        Assert.assertEquals("datos.xlsx",resultado);
     }
 
     @Test
     public void exportarPDF() {
         this.documento.agregarDatos("1", "Juan", "Sampieri", "19");
-        String resultado = ExportadorDocumento.exportarDocumento(documento, FabricaExportador.TipoExportacion.PDF, "datos.pdf");
-        Assert.assertEquals("datos.pdf", resultado);
+        String resultado = FabricaExportador.obtenerEstrategia("PDF", "datos.pdf", documento);
+        Assert.assertEquals("datos.pdf",resultado);
     }
 }
